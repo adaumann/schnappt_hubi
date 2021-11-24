@@ -7,6 +7,9 @@ The board game "Schnappt Hubi" has an electronic device for directing the player
 # Language
 Currently only the german version exists. 
 
+# Installation
+You need .NET 6 to run Hubi. For playing sounds VLC media player need to be installed, the exe must be in C:\Program Files\VideoLAN\VLC\vlc.exe
+
 ## Gameplay
 You need the orginal board game to play, german instructions: See https://www.brettspiele-report.de/images/s/schnappt-hubi/Spielanleitung-Schnappt-Hubi.pdf
 
@@ -14,9 +17,9 @@ You need to select the level first (1-3), same as level selector on device.
 The you need to define the players and the order, i.e. rgb means 3 players in order red, green, blue
 
 During game:
-h = get hint
-r = repeat last sentence
-Arrow Keys = Direction
+* h = get hint
+* r = repeat last sentence
+* Arrow Keys = Direction
 
 # Cheat
 If you add the commandline parameter -c you see a debug board layout and location of walls and of Hubi.

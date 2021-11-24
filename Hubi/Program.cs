@@ -22,6 +22,13 @@ namespace Hubi
         `--' `--' #  `-----'    # `------'  #  `--'    #
 
 ");
+            var cheat = args.Length == 1 && args[0] == "-c";
+
+            if(cheat)
+            {
+                Console.WriteLine("--- Cheat actived! --- \n");    
+            }
+
             Console.Write("Level 1-3: ");
             int lev = Convert.ToInt32(Console.ReadLine());
             Console.Write("Player Order (rgby): ");
@@ -38,7 +45,7 @@ namespace Hubi
                 return;
             }
 
-            var game = new Game(false, lev,players);
+            var game = new Game(cheat, lev,players);
             game.Init();
             var isEnd = false;
             while(!isEnd)

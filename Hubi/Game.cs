@@ -446,6 +446,12 @@ namespace Hubi
                 var magicDoors = boardMesh.Where(v => v.WallType == WallType.MagicClosed);
 
                 var c = magicDoors.Count();
+                if(c == 0)
+                {
+                    media.AddSound("failmove1");
+                    Console.WriteLine("No hint possible");
+                    return false;
+                }
                 var r = new Random().Next(0, c);
                 var magicDoor = magicDoors.ElementAt(r);
                 var magic1 = board.Single(f => f.x == magicDoor.X1 && f.y == magicDoor.Y1);
