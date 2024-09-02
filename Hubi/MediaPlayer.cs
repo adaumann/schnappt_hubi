@@ -38,7 +38,7 @@ namespace Hubi
 
             using (var process = new Process())
             {
-                process.StartInfo.FileName = @"C:\Program Files\VideoLAN\VLC\vlc.exe"; // relative path. absolute path works too.
+                process.StartInfo.FileName = @"%PROGRAMFILES%\VideoLAN\VLC\vlc.exe"; // absolute path.
                 process.StartInfo.Arguments = $"--qt-start-minimized --play-and-exit --qt-notification=0 --no-loop {queueStr}";
                 process.StartInfo.CreateNoWindow = true;
                 process.StartInfo.UseShellExecute = false;
